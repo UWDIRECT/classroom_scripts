@@ -23,13 +23,13 @@ else
 
 	#set parameters to more obvious variable names
 	classroom="https://github.com/"$1"/"
-	assignment=$2
-	file=$3
+	assignment="$2"
+	file="$3"
 
 	# read line by line and clone the assignment
 	while read line
 	do
-		name=${assignment}-${line}
-		git clone ${classroom}${name}
+		name="${assignment}-${line}"
+		git clone "${classroom}${name}"
 	done < $file
 fi
